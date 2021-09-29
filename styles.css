@@ -11,23 +11,49 @@ body{
     background-color: black;
 }
 .signBox{
-    width: 60%;
+    width: min(90%, 1000px);
 }
 .letters{
     fill: #f5edf3;
     filter: drop-shadow(0 0 20px rgb(255, 0, 0)) blur(0.8px);
     stroke:rgb(255, 65, 65);
     stroke-width: 1px;
+    animation: 25ms linear strobeRed1 infinite;
+}
+@keyframes strobeRed1{
+    from{
+        stroke: rgb(255, 65, 65);
+        filter: drop-shadow(0 0 20px rgb(255, 0, 0)) blur(0.8px);
+    } to {
+        stroke: rgb(161, 42, 42);
+        filter: drop-shadow(0 0 15px rgb(255, 0, 0)) blur(0.5px);
+    }
 }
 .neonBox{
     fill: #f5eef5;
-    filter:drop-shadow(0 0 10px green) blur(0.8px);
+    filter:drop-shadow(0 0 15px green) blur(0.8px);
     stroke-width: 1px;
     stroke: rgb(112, 221, 112);
+    animation: 5ms linear strobeGreen infinite;
+}
+@keyframes strobeGreen{
+    from{
+        stroke: rgb(112, 221, 112);
+        filter:drop-shadow(0 0 15px green) blur(0.8px);
+    } to {
+        stroke: rgb(63, 121, 63);
+        filter:drop-shadow(0 0 10px green) blur(0.5px);
+    }
 }
 .strokeBox{
     fill: rgb(104, 28, 5);
     stroke:rgb(58, 17, 5);
     stroke-miterlimit:10;
     filter: drop-shadow(0 0  20px rgb(104, 28, 5)) blur(1px);
+}
+.backboard{
+    fill:#31290f;
+    stroke: rgb(32, 34, 11);
+    stroke-width: 2px;
+    filter: drop-shadow(0 0  40px rgb(32, 34, 11)) blur(1px);
 }
